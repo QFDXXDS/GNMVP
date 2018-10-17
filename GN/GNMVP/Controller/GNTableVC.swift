@@ -8,9 +8,12 @@
 
 import UIKit
 
-class GNTableVC: UITableViewController {
-
-    var  presenter: GNPresenter?
+class GNTableVC: UITableViewController, PresenterProtocol {
+    
+    typealias T = Model
+    var tableArray: [Model] = [Model]()
+    var  presenter: GNPresenter<GNTableVC>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,13 +23,15 @@ class GNTableVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        presenter = GNPresenter.init(v: self)
+        presenter = GNPresenter.init(p: self)
+        presenter?.getData(page: 1, size: 20)
         
     }
     func getData() {
         
         self.tableView.reloadData()
     }
+    
     
     // MARK: - Table view data source
     
@@ -37,7 +42,7 @@ class GNTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return presenter!.tableArray.count
+        return self.tableArray.count
     }
 
     /*

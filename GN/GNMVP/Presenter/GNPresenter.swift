@@ -10,15 +10,13 @@
 import Foundation
 import UIKit
 
-class GNPresenter {
+class GNPresenter<T:PresenterProtocol> {
     
-    weak var vc:GNTableVC?
-    var tableArray = Array<Any>()
+    weak var pp:T?
 
-    init(v: GNTableVC) {
+    init(p: T) {
         
-        
-        vc = v
+        pp = p
     }
     func getData(page: Int, size: Int) {
         
@@ -29,8 +27,8 @@ class GNPresenter {
         
         GN.HTTPRequesgt(req: req).observeValues { (rsp) in
             
-            self.tableArray = Model.wrraperData(object: rsp as! Dictionary<String, Any>)
-            self.vc!.getData()
+            self.pp!.tableArray = Model.wrraperData(object: rsp as! Dictionary<String, Any>) as! [T.T]
+            self.pp!.getData()
         }
     }
 }

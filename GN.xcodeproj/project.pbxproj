@@ -29,6 +29,7 @@
 		F0C4AF9B216C7E4500B29D16 /* GNWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C4AF9A216C7E4500B29D16 /* GNWrapper.swift */; };
 		F0C4AF9D216C7E5100B29D16 /* GNPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C4AF9C216C7E5100B29D16 /* GNPath.swift */; };
 		F0C4AF9F216C7E5E00B29D16 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C4AF9E216C7E5E00B29D16 /* String+Extension.swift */; };
+		F0CB98432176CF5A00385E74 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB98422176CF5A00385E74 /* Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F0C4AF9A216C7E4500B29D16 /* GNWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNWrapper.swift; sourceTree = "<group>"; };
 		F0C4AF9C216C7E5100B29D16 /* GNPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNPath.swift; sourceTree = "<group>"; };
 		F0C4AF9E216C7E5E00B29D16 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F0CB98422176CF5A00385E74 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 		F0B1815F2176407200B4AAE9 /* GNMVP */ = {
 			isa = PBXGroup;
 			children = (
+				F0CB98412176CF4700385E74 /* Protocol */,
 				F0B181602176407200B4AAE9 /* Presenter */,
 				F0B181622176407200B4AAE9 /* Controller */,
 				F0B181642176407200B4AAE9 /* Req */,
@@ -346,6 +349,14 @@
 				F0C4AF98216C7A5D00B29D16 /* MSReq.swift */,
 			);
 			path = Req;
+			sourceTree = "<group>";
+		};
+		F0CB98412176CF4700385E74 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB98422176CF5A00385E74 /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +495,7 @@
 				F08740F61FA6DE710005A418 /* UIStoryBoard+Extension.swift in Sources */,
 				F0C4AF9D216C7E5100B29D16 /* GNPath.swift in Sources */,
 				F0B181692176407200B4AAE9 /* GNTableVC.swift in Sources */,
+				F0CB98432176CF5A00385E74 /* Protocol.swift in Sources */,
 				F08740E11FA6CE240005A418 /* AppDelegate.swift in Sources */,
 				F0C4AF9B216C7E4500B29D16 /* GNWrapper.swift in Sources */,
 				F0B181682176407200B4AAE9 /* GNPresenter.swift in Sources */,
